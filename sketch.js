@@ -1,16 +1,21 @@
 var eship,ship,ecannon,cannon,ob
+var database;
+var Gamestate = 0;
+var playerCount = 0;
+var form,game,player
 
 function preload(){
 
 }
 function setup() {
   createCanvas(400,600);
+  database= firebase.database();
 
-  eship = createSprite(200, 50, 50, 50);
-  ship = createSprite(200, 550, 50, 50);
-  ecannon = createSprite(200, 200, 20, 20);
-  cannon = createSprite(200, 400, 20, 20);
-  ob = createSprite(100, 300, 80, 30);
+  game = new Game();
+  game.getState();
+  game.start();
+
+  
 
 
 }
@@ -18,14 +23,13 @@ function setup() {
 function draw() {
   background("blue");  
 
-  if(keyIsDown(LEFT_ARROW)){
-    ship.x+=-10;
-    eship.x+=-10
-  }
-  if(keyIsDown(RIGHT_ARROW)){
-    ship.x+=10;
-    eship.x+=10;
-  }
+  
 
-  drawSprites();
+  if(playerCount===2){
+    game.update(1);
+}
+if(gamestate===1){
+  clear();
+  game.play();
+}
 }

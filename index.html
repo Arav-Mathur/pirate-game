@@ -5,12 +5,36 @@
 <script src="./p5.play.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBvdnSy-XB86G1PNs91dCAL5-DskV3mz7c",
+    authDomain: "pirate-war-6fe78.firebaseapp.com",
+    projectId: "pirate-war-6fe78",
+    storageBucket: "pirate-war-6fe78.appspot.com",
+    messagingSenderId: "954817961890",
+    appId: "1:954817961890:web:5efc280a7933c37f0c9cfb"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
   </head>
   <body>
       <script src="sketch.js"></script>
       <script src="touch library.js"></script>
       <script src="cannon.js"></script>
+      <script src="Game.js"></script>
+      <script src="Player.js"></script>
+      <script src="Form.js"></script>
+
+
 
   
 
