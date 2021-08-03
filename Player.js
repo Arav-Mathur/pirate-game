@@ -4,6 +4,7 @@ class Player {
         this.name = null;
         this.bullets =15;
         this.health = 5;
+        this.cannon 
     }
     getCount(){
         var playerCountRef= database.ref('playerCount');
@@ -25,4 +26,10 @@ class Player {
         })
  
      }
+     static get_PlayerInfo(){
+        var playerInfoRef= database.ref('players');
+        playerInfoRef.on("value",(data)=>{
+            allPlayers=data.val();
+        })
+    }
 }

@@ -3,14 +3,20 @@ class Form{
         this.input= createInput('Anonymous');
         this.button= createButton('Play');
         this.greeting= createElement('h2');
-        this.reset= createButton('reset')
+        this.reset= createButton('reset');
+        this.title= createElement('h1');
+
     }
     display(){
-        var title= createElement('h1');
-        title.html("Pirate game");
-        title.position(120,10);
+        this.title.html("Pirate game");
+        this.title.position(120,10);
         this.input.position(120,200);
         this.button.position(180,250);
+
+        this.reset.mousePressed(()=>{
+            player.updateCount(0);
+            game.update(0);
+        })
 
         this.button.mousePressed(()=>{
             this.input.hide();
@@ -31,6 +37,7 @@ class Form{
         this.input.hide();
         this.button.hide();
         this.greeting.hide();
+        this.title.hide();
     }
 
     }
