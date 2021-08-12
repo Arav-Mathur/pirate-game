@@ -9,9 +9,7 @@ var bg,shipr_img,shipl_img,eshipr_img,eshipl_img,cannon_img,ecannon_img,ob_img
 function preload(){
   bg = loadImage("images/bg.png");
   shipr_img = loadImage("images/ship r.png");
-  shipl_img = loadImage("images/ship l.png");
   eshipr_img = loadImage("images/eship r.png");
-  eshipl_img = loadImage("images/eship l.png");
   cannon_img = loadImage("images/cannonball.png");
   ecannon_img = loadImage("images/ecannon1.png");
   ob_img= loadImage("images/obstacle.png");
