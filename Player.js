@@ -4,7 +4,9 @@ class Player {
         this.name = null;
         this.bullets =15;
         this.health = 5;
-        this.cannon 
+        this.distance = 200;
+        this.cannon_y = 550;
+        this.ecannon_y = 50;
     }
     getCount(){
         var playerCountRef= database.ref('playerCount');
@@ -22,7 +24,10 @@ class Player {
         database.ref(playerIndex).set({
             name: this.name,
             bullets: this.bullets,
-            health:this.health
+            health: this.health,
+            distance: this.distance,
+            cannon_y: this.cannon_y,
+            ecannon_y: this.ecannon_y
         })
  
      }
