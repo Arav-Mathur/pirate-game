@@ -93,7 +93,7 @@ drawSprites();
                         
                     }
                     
-        
+           
                 }
                 console.log(player.index);
                 
